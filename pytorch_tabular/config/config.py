@@ -537,7 +537,7 @@ class ModelConfig:
         default=None,
         metadata={"help": "The parameters to be passed to the metrics function"},
     )
-    target_range: Optional[List] = field(
+    target_range: Optional[List[Tuple[float, float]]] = field(
         default=None,
         metadata={
             "help": "The range in which we should limit the output variable. Currently ignored for multi-target regression. Typically used for Regression problems. If left empty, will not apply any restrictions"
